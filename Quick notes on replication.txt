@@ -1,0 +1,28 @@
+# Assignment 2: Replication exercise
+# Author: Eric Hsienchen Chu
+
+Paper: Crowley, Meredith, Ning Meng, and Huashen Song, “Tariff scares: 
+Trade policy uncertainty and foreign market entry by Chinese firms." 
+Journal of International Economics, vol. 114, (2018):96-115. 
+
+#####################
+## Access the data ##
+#####################
+
+Download the zip dofiles and data from: 
+https://meredithcrowley.weebly.com/uploads/2/1/7/6/21768054/tariffscaresdofilesdata.zip 
+
+Changed the package name to "Replication package for Tariff scares"
+
+######################
+## Folder structure ##
+######################
+
+Assignment2-replication
+
+- \Replication package for Tariff scares
+	- (dofiles and data)
+- Assignment 2 - Replication Exercise.pdf
+- Crowley et al. (2018) JIE.pdf
+- \temp
+	- (intend to put replication codes here)
