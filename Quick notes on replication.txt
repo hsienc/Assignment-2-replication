@@ -10,10 +10,10 @@ https://doi.org/10.1016/j.jinteco.2018.05.003
 ## Access the data ##
 #####################
 
-Download the zip dofiles and data from: 
+Downloaded the zip dofiles and data from: 
 https://meredithcrowley.weebly.com/uploads/2/1/7/6/21768054/tariffscaresdofilesdata.zip 
 
-Changed the package name to "Replication package for Tariff scares"
+Renamed the package to "Replication package for Tariff scares"
 
 ######################
 ## Folder structure ##
