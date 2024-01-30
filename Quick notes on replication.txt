@@ -4,6 +4,7 @@
 Paper: Crowley, Meredith, Ning Meng, and Huashen Song, “Tariff scares: 
 Trade policy uncertainty and foreign market entry by Chinese firms." 
 Journal of International Economics, vol. 114, (2018):96-115. 
+https://doi.org/10.1016/j.jinteco.2018.05.003 
 
 #####################
 ## Access the data ##
