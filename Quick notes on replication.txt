@@ -27,3 +27,9 @@ Assignment2-replication
 - Crowley et al. (2018) JIE.pdf
 - \temp
 	- (intend to put replication codes here)
+
+#########################
+## Sample construction ##
+#########################
+
+See Appendix A.1. for details
