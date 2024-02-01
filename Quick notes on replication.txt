@@ -27,6 +27,7 @@ Assignment2-replication
 - Crowley et al. (2018) JIE.pdf
 - \temp
 	- (intend to put replication codes here)
+- Quick notes on replication.txt
 
 #########################
 ## Sample construction ##
