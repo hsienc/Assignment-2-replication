@@ -9,7 +9,7 @@
 
 ## Data
 
-Please download the newest version of the replication package for `Schoellman (2016)'
+Please download the newest version of the replication package for `Schoellman (2016)`
 
 
 ## References
