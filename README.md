@@ -1,3 +1,6 @@
 ## REPLICATION: SCHOELLMAN (2016) AEJ: MACRO
+**Last edited:** February 14, 2024
 
-Paper: Schoellman, Todd. "Early Childhood Human Capital and Development." American Economic Journal: Macroeconomics, vol. 8, no. 3 (2016): 145-174. [10.1257/mac.20150117](10.1257/mac.20150117)
+**References.** Schoellman, Todd. (2016). Early childhood human capital and development. _American Economic Journal: Macroeconomics,_ 8(3), 145–74. [https://doi.org/10.1257/mac.20150117](https://doi.org/10.1257/mac.20150117)
+
+- - -
