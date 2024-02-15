@@ -29,7 +29,7 @@ Please download the newest version of [`Schoellman (2016) replication package`](
 
 ## Data 
 
-In `Replication package for ECHCD/data/raw-data`, we need to manually download two additional datasets into `/iharp` and `/parents-abroad`, respectively.
+In `/Replication package for ECHCD/data/raw-data`, we need to manually download two additional datasets into `/iharp` and `/parents-abroad`, respectively.
 
 ## References
 
