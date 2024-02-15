@@ -7,19 +7,24 @@
 - [References](#References)
   
 
-## Data
+## Data Construction 
 
-Please download the newest version of the replication package for [`Schoellman (2016)`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. An example of the directory structure is the following:
+Please download the newest version of the replication package for [`Schoellman (2016)`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. A sample directory structure looks like the following:
 
     .
-    ├── build                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    │   ├── benchmarks          # Load and stress tests
-    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit                # Unit tests
-    ├── LICENSE
+    ├── paper                               # Main paper and appendix  
+    ├── Replication package for ECHCD       # Downloaded replication pkg 
+    │   ├── data   
+    │       ├── readme.txt                  # Read BEFORE execute the dofiles!
+    │       ├── raw-data                      
+    │           ├── census
+    │           ├── census-1990
+    │           ├── census-9000
+    │           ├── iharp                   # See instructions below to construct this dataset
+    │           └── parents-abroad          # See instructions below to construct this dataset
+    │       ├── (bunch of do files)  
+    │       ├── results                     # Generated figures and tex files 
+    │       └── temp                        
     └── README.md
 
 ## References
