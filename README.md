@@ -3,11 +3,11 @@
 
 ## Table of Contents
 
-- [Data Construction](#DataConstruction)
+- [Data Construction](#Construction)
 - [References](#References)
   
 
-## Data Construction 
+## Construction 
 
 Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. A sample directory structure looks like the following:
 
