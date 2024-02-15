@@ -13,20 +13,21 @@
 Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. Here is a sample structure that your local directory may look like:
 
     . 
-    ├── Replication package for ECHCD       # Downloaded replication pkg 
+    ├── Replication package for ECHCD   # Downloaded replication pkg 
     │   ├── data   
-    │   │   ├── readme.txt                  # Read BEFORE execute the dofiles!
+    │   │   ├── readme.txt              # READ BEFORE EXECUTE master.do!
     │   │   ├── raw-data                      
     │   │   │   ├── census
     │   │   │   ├── census-1990
     │   │   │   ├── census-9000
-    │   │   │   ├── iharp                   # See instructions below to construct this dataset
-    │   │   │   └── parents-abroad          # See instructions below to construct this dataset
+    │   │   │   ├── parents-abroad      # See instructions below on how to construct this dataset
+    │   │   │   └── iharp               # See instructions below on how to construct this dataset
     │   │   ├── (bunch of do files)  
-    │   │   ├── results                     # Generated figures and tex files 
+    │   │   ├── master.do               # RUN THIS .DO FILE
+    │   │   ├── results                 # Generated figures and tex files 
     │   │   └── temp   
     │   └── LICENSE.txt
-    └── README.md                           # This instruction
+    └── README.md                      
 
 ## Data 
 
