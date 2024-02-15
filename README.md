@@ -9,7 +9,7 @@
 
 ## Data
 
-Please download the newest version of the replication package for [`Schoellman (2016)`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view)
+Please download the newest version of the replication package for [`Schoellman (2016)`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. 
 
 
 ## References
