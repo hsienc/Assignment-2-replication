@@ -10,28 +10,18 @@
 
 ## Folder 
 
-Please download the newest version of [`Garthwaite et al. (2014) replication package`](http://www.nber.org/~notom/ggn-replication-kit.zip) and check/rename the package to `ggn-replication-kit`. Here is a sample structure that your local directory may look like:
+Please download the newest version of [`Garthwaite et al. (2014) replication package`](http://www.nber.org/~notom/ggn-replication-kit.zip) and check/rename the package to `ggn-replication-kit`. Here is the main structure that your local directory may look like:
 
     . 
     ├── ggn-replication-kit              # Your downloaded replication pkg 
     │   ├── do
-    │       ├── summary.do               # RUN THIS .DO FILE
-    │   ├── dta 
+    │   │   ├── summary.do               # RUN THIS .DO FILE
+    │   │   ├── README.md                # A very "succinct" README file From Authors
+    │   │   └── (bunch of do files)
+    │   ├── dta                          # Raw data; consider download new CPS data from [https://cps.ipums.org/cps/](https://cps.ipums.org/cps/)
     │   ├── gph                          # Generated figures
     │   ├── log  
-    │   ├── src  
-    │   │   ├── readme.txt               # READ BEFORE EXECUTE master.do!
-    │   │   ├── raw data                      
-    │   │   │   ├── census
-    │   │   │   ├── census 1990
-    │   │   │   ├── census 9000
-    │   │   │   ├── parents abroad       # See instructions below on how to construct this dataset
-    │   │   │   └── iharp                # See instructions below on how to construct this dataset
-    │   │   ├── (bunch of do files)  
-    │   │   ├── master.do                # RUN THIS .DO FILE
-    │   │   ├── results                  # Generated figures and tex files 
-    │   │   └── temp   
-    └── README.md                        # 
+    └── └── src  
 
 ## Data 
 
