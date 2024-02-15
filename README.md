@@ -10,10 +10,10 @@
 
 ## Folder 
 
-Please download the newest version of [`Garthwaite et al. (2014) replication package`](http://www.nber.org/~notom/ggn-replication-kit.zip) and rename the package to `Replication package for PHILSEL`. Here is a sample structure that your local directory may look like:
+Please download the newest version of [`Garthwaite et al. (2014) replication package`](http://www.nber.org/~notom/ggn-replication-kit.zip) and check/rename the package to `ggn-replication-kit`. Here is a sample structure that your local directory may look like:
 
     . 
-    ├── Replication package for PHILSEL  # Downloaded replication pkg 
+    ├── ggn-replication-kit              # Your downloaded replication pkg 
     │   ├── data   
     │   │   ├── readme.txt               # READ BEFORE EXECUTE master.do!
     │   │   ├── raw data                      
