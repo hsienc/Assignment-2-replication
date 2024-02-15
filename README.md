@@ -10,7 +10,7 @@
 
 ## Folder 
 
-Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. Here is a sample directory structure that your local folder may look like:
+Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. Here is a sample structure that your local directory may look like:
 
     . 
     ├── Replication package for ECHCD       # Downloaded replication pkg 
@@ -24,8 +24,9 @@ Please download the newest version of [`Schoellman (2016) replication package`](
     │   │   │   └── parents-abroad          # See instructions below to construct this dataset
     │   │   ├── (bunch of do files)  
     │   │   ├── results                     # Generated figures and tex files 
-    │   │   └── temp                        
-    └── README.md
+    │   │   └── temp   
+    │   └── LICENSE.txt
+    └── README.md                           # This instruction
 
 ## Data 
 
