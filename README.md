@@ -15,16 +15,16 @@ Please download the newest version of the replication package for [`Schoellman (
     ├── paper                               # Main paper and appendix  
     ├── Replication package for ECHCD       # Downloaded replication pkg 
     │   ├── data   
-    │       ├── readme.txt                  # Read BEFORE execute the dofiles!
-    │       ├── raw-data                      
-    │           ├── census
-    │           ├── census-1990
-    │           ├── census-9000
-    │           ├── iharp                   # See instructions below to construct this dataset
-    │           └── parents-abroad          # See instructions below to construct this dataset
-    │       ├── (bunch of do files)  
-    │       ├── results                     # Generated figures and tex files 
-    │       └── temp                        
+    │   │   ├── readme.txt                  # Read BEFORE execute the dofiles!
+    │   │   ├── raw-data                      
+    │   │   │   ├── census
+    │   │   │   ├── census-1990
+    │   │   │   ├── census-9000
+    │   │   │   ├── iharp                   # See instructions below to construct this dataset
+    │   │   │   └── parents-abroad          # See instructions below to construct this dataset
+    │   │   ├── (bunch of do files)  
+    │   │   ├── results                     # Generated figures and tex files 
+    │   │   └── temp                        
     └── README.md
 
 ## References
