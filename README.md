@@ -16,11 +16,11 @@ Please download the newest version of [`Schoellman (2016) replication package`](
     ├── Replication package for ECHCD   # Downloaded replication pkg 
     │   ├── data   
     │   │   ├── readme.txt              # READ BEFORE EXECUTE master.do!
-    │   │   ├── raw-data                      
+    │   │   ├── raw data                      
     │   │   │   ├── census
-    │   │   │   ├── census-1990
-    │   │   │   ├── census-9000
-    │   │   │   ├── parents-abroad      # See instructions below on how to construct this dataset
+    │   │   │   ├── census 1990
+    │   │   │   ├── census 9000
+    │   │   │   ├── parents abroad      # See instructions below on how to construct this dataset
     │   │   │   └── iharp               # See instructions below on how to construct this dataset
     │   │   ├── (bunch of do files)  
     │   │   ├── master.do               # RUN THIS .DO FILE
