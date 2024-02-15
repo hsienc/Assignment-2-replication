@@ -9,7 +9,7 @@
 
 ## Construction 
 
-Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. A sample directory structure looks like the following:
+Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. Here is a sample directory structure that your local folder will look like:
 
     .
     ├── paper                               # Main paper and appendix  
