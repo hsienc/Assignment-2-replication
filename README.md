@@ -1,5 +1,5 @@
-# REPLICATION: GARTHWAITE et al. (2014) QJE
-**Last edited:** February 14, 2024
+# REPLICATION: Garthwaite et al. (2014) QJE
+**Last edited:** February 15, 2024
 
 ## Table of Contents
 
