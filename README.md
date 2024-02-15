@@ -30,7 +30,12 @@ Please download the newest version of [`Schoellman (2016) replication package`](
 
 ## Data 
 
-In `/raw-data`, we need to manually download two additional datasets into `/raw-data/iharp` and `/raw-data/parents-abroad`, respectively.
+In `/raw-data/`, we need to manually download `IPUMS` datasets and `IHARP` dataset into `/raw-data/parents-abroad/` and `/raw-data/iharp/`, respectively.
+
+1. `IPUMS`: Register with IPUMS at [https://international.ipums.org/international/](https://international.ipums.org/international/) The extract needs to contain data on the following variables:
+   > cntry year sample serial pernum wtper nchild age sex chborn yrschl educkh educvn empstat empstatd occ
+   
+   This extract should be placed in `/raw data/parents abroad/`.  Note that, to read in data successfully, one will need to modify lines 2254-2272 of `/data/ec_family.do` using the .do file provided with the extract so that the code executes correctly.
 
 ## References
 
