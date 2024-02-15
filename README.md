@@ -36,7 +36,7 @@ In `/raw-data/`, we need to manually download `IPUMS` datasets and `IHARP` datas
 1. `IPUMS`: Register with IPUMS at [https://international.ipums.org/international/](https://international.ipums.org/international/). Your extract needs to contain data on the following variables:
    > cntry year sample serial pernum wtper nchild age sex chborn yrschl educkh educvn empstat empstatd occ
    
-   This extract should be placed in `/raw data/parents abroad/`. Note that, in IPUMS USA, “detailed” codes are automatically included in extracts for selected variables. So, selecting EMPSTAT simultaneously contain both EMPSTAT (general) and EMPSTATD (detailed) in our desirable variable list. Also note that, to read in data successfully, one will need to modify lines 2254-2272 of `/data/ec_family.do` using the .do file provided with the extract.
+   This extract should be placed in `/raw data/parents abroad/`. Note that, “detailed” codes are automatically included in extracts for selected variables in IPUMS USA. So, selecting EMPSTAT simultaneously contain both `EMPSTAT` (general) and `EMPSTATD` (detailed) in our desirable variable list. Also note that, to read in data successfully, one will need to modify `lines 2254-2272` of `/data/ec_family.do` using the .do file provided with the extract.
 
 ## References
 
