@@ -3,16 +3,15 @@
 
 ## Table of Contents
 
-- [Data Construction](#Construction)
+- [Folder Structure](#Folder)
 - [References](#References)
   
 
-## Construction 
+## Folder 
 
-Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. Here is a sample directory structure that your local folder will look like:
+Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) and rename the package to `Replication package for ECHCD`. Here is a sample directory structure that your local folder may look like:
 
-    .
-    ├── paper                               # Main paper and appendix  
+    . 
     ├── Replication package for ECHCD       # Downloaded replication pkg 
     │   ├── data   
     │   │   ├── readme.txt                  # Read BEFORE execute the dofiles!
