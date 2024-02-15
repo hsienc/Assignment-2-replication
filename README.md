@@ -4,6 +4,7 @@
 ## Table of Contents
 
 - [Folder Structure](#Folder)
+- [Data Construction](#Data)
 - [References](#References)
   
 
@@ -25,6 +26,10 @@ Please download the newest version of [`Schoellman (2016) replication package`](
     │   │   ├── results                     # Generated figures and tex files 
     │   │   └── temp                        
     └── README.md
+
+## Data 
+
+In `Replication package for ECHCD/data/raw-data`, we need to manually download two additional datasets into `/iharp` and `/parents-abroad`, respectively.
 
 ## References
 
