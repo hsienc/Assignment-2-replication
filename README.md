@@ -14,7 +14,12 @@ Please download the newest version of [`Garthwaite et al. (2014) replication pac
 
     . 
     ├── ggn-replication-kit              # Your downloaded replication pkg 
-    │   ├── data   
+    │   ├── do
+    │       ├── summary.do               # RUN THIS .DO FILE
+    │   ├── dta 
+    │   ├── gph                          # Generated figures
+    │   ├── log  
+    │   ├── src  
     │   │   ├── readme.txt               # READ BEFORE EXECUTE master.do!
     │   │   ├── raw data                      
     │   │   │   ├── census
@@ -26,8 +31,7 @@ Please download the newest version of [`Garthwaite et al. (2014) replication pac
     │   │   ├── master.do                # RUN THIS .DO FILE
     │   │   ├── results                  # Generated figures and tex files 
     │   │   └── temp   
-    │   └── LICENSE.txt
-    └── README.md                      
+    └── README.md                        # 
 
 ## Data 
 
