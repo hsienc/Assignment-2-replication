@@ -36,7 +36,7 @@ Following the following steps to replicate Table 1 & Figure 2-5 in Schoellman (2
 4. Open `/data/master-modified.do` and ensure it carries out the program `ec_adult-modified.do`.
 5. Section 1 is mainly Data importation and cleaning, which takes roughly 3-4 hours.
 6. We will save a subset of samples `/temp/census_sample_tenPercentDummy.dta` at the end of Section 1. This subset of data excludes 90% of the natives data, which are relatively irrelavant to the paper focus but significantly saves running time (only takes ~2 minutes to load in).
-7. Section 2 is the results replications. I modified the fixed effect regressions and calculate estimates of our variables of interest, their standard errors, and confidence intervals separately. It yields the same estimates.
+7. Section 2 is the results replications. Note that I modified the fixed effect regressions in the original package and calculate estimates of our variables of interest, their standard errors, and confidence intervals separately. It yields the same estimates.
 8. Check the Table 1 and Figure 2-5 in the original paper and see if they are "consistent". 
 
 ## References
