@@ -5,8 +5,12 @@
 
 ec_adult-modified.do
 
+Original package: https://www.openicpsr.org/openicpsr/project/114117/version/V2/view
+
+Modified by Eric Hsienchen Chu
+
 This file estimates the adult socioeconomic outcomes of Indochinese refugees as a function
-of their age at arrival to the United States. 
+of their age at arrival to the United States in Schoellman (2006). 
 
 Steps:
 1.  Setup and manipulation of external files.
@@ -69,6 +73,8 @@ Step 1. Setup and manipulation of external files.
 	  byte    uhrswork   75-76  ///
 	  long    incwage    77-82  ///
 	  using `"./raw data/census/usa_00131.dat"'
+
+* PLEASE BE PATIENT WHEN LOADING IN THIS DAT FILE
 
 	replace perwt     = perwt     / 100
 
@@ -2616,29 +2622,15 @@ being employed, institutionalized, college graduate, or divorced.
 *
 * 2.1: Outcome 1: Wages
 *
-	
 	use ./temp/census_sample_tenPercentDummy.dta, clear 
 	* use ./temp/census_sample.dta, clear
 
-	
 	keep if wagesample == 1
 	keep if birc == 0
 	keep if aa <= 5 | immigrant == 0
 	keep if countrygroup == 1 | countrygroup == 7
 	drop if missing(subgroup1)
-
-/* original codes: line 2645 looks like typo
-	* Linear regression to test for trend effects formally.
-	xi i.subgroup1
-	reg logwage aa sex _I* _J* [aw=perwt], robust
-	* PAPER TABLE 1: POOLED
-	reg logwage aa _I* _J* [aw=perwt] if sex == 0, robust
 	
-	xi i.subgroup1 i.subgroup1*aa
-	reg logwage sex _I* _J* [aw=perwt], robust
-	* PAPER TABLE 1: BY ETHNIC GROUP
-	reg logwage aa _I* _J* [aw=perwt] if sex == 0, robust
-*/	
 	
 	* overview of immigrants
 	tabulate subgroup1 if immigrant == 1
@@ -2710,7 +2702,7 @@ being employed, institutionalized, college graduate, or divorced.
 	set scheme stsj
 	line estimate min95 max95 aa, by(group,ix note("") legend(at(6) pos(0) textwidth(6)) ) lpattern(solid dash dash) lwidth(medthick medium medium)  xtitle("Age at Arrival") ytitle("Log Wages, Relative to Natives") legend(order(1 2) label(1 "Parameter estimate") label(2 "95% Confidence Interval") rows(2) forces size(small)) xlabel(0(1)5)
 	graph export ./results/Figure2_wages.pdf, replace
-    * PAPER FIGURE 2
+    	* PAPER FIGURE 2
 	
  
     
@@ -2732,14 +2724,7 @@ being employed, institutionalized, college graduate, or divorced.
 	keep if countrygroup == 1 | countrygroup == 7
 	drop if missing(subgroup1)
 
-/*
-	* Linear spline regression with endogenously chosen break point.
-	xi i.subgroup1
-	nl (logwage = {eth1}*_Isubgroup1_1 + {eth2}*_Isubgroup1_2 + {eth3}*_Isubgroup1_3 + {eth4}*_Isubgroup1_4 + {eth5}*_Isubgroup1_5 + {year1}*_Jyear_2005 + {year2}*_Jyear_2006 + {year3}*_Jyear_2007 + {year4}*_Jyear_2008 + {year5}*_Jyear_2009 + {year6}*_Jyear_2010 + {year7}*_Jyear_2011 + {year8}*_Jyear_2012 + {age24}*_Jage_24 + {age25}*_Jage_25 + {age26}*_Jage_26 + {age27}*_Jage_27 + {age28}*_Jage_28 + {age29}*_Jage_29 + {age30}*_Jage_30 + {age31}*_Jage_31 + {age32}*_Jage_32 + {age33}*_Jage_33 + {age34}*_Jage_34 + {age35}*_Jage_35 + {age36}*_Jage_36 + {age37}*_Jage_37 + {age38}*_Jage_38 + {age39}*_Jage_39 + {age40}*_Jage_40 + {age41}*_Jage_41 + {age42}*_Jage_42 + {age43}*_Jage_43 + {age44}*_Jage_44 + {age45}*_Jage_45 + {age46}*_Jage_46 + {age47}*_Jage_47 + {age48}*_Jage_48 + {age49}*_Jage_49 + {age50}*_Jage_50 + {age51}*_Jage_51 + {age52}*_Jage_52 + {age53}*_Jage_53 + {age54}*_Jage_54 + {age55}*_Jage_55 + {age56}*_Jage_56 + {age57}*_Jage_57 + {age58}*_Jage_58 + {age59}*_Jage_59 + {age60}*_Jage_60 + {state2}*_Jstatefip_2 + {state4}*_Jstatefip_4 + {state5}*_Jstatefip_5 + {state6}*_Jstatefip_6 + {state8}*_Jstatefip_8 + {state9}*_Jstatefip_9 + {state10}*_Jstatefip_10 + {state11}*_Jstatefip_11 + {state12}*_Jstatefip_12 + {state13}*_Jstatefip_13 + {state15}*_Jstatefip_15 + {state16}*_Jstatefip_16 + {state17}*_Jstatefip_17 + {state18}*_Jstatefip_18 + {state19}*_Jstatefip_19 + {state20}*_Jstatefip_20 + {state21}*_Jstatefip_21 + {state22}*_Jstatefip_22 + {state23}*_Jstatefip_23 + {state24}*_Jstatefip_24 + {state25}*_Jstatefip_25 + {state26}*_Jstatefip_26 + {state27}*_Jstatefip_27 + {state28}*_Jstatefip_28 + {state29}*_Jstatefip_29 + {state30}*_Jstatefip_30 + {state31}*_Jstatefip_31 + {state32}*_Jstatefip_32 + {state33}*_Jstatefip_33 + {state34}*_Jstatefip_34 + {state35}*_Jstatefip_35 + {state36}*_Jstatefip_36 + {state37}*_Jstatefip_37 + {state38}*_Jstatefip_38 + {state39}*_Jstatefip_39 + {state40}*_Jstatefip_40 + {state41}*_Jstatefip_41 + {state42}*_Jstatefip_42 + {state44}*_Jstatefip_44 + {state45}*_Jstatefip_45 + {state46}*_Jstatefip_46 + {state47}*_Jstatefip_47 + {state48}*_Jstatefip_48 + {state49}*_Jstatefip_49 + {state50}*_Jstatefip_50 + {state51}*_Jstatefip_51 + {state53}*_Jstatefip_53 + {state54}*_Jstatefip_54 + {state55}*_Jstatefip_55 + {state56}*_Jstatefip_56 + {sex}*sex +	///
-	cond(aa<{c},{a}+{m1}*aa,{a}+{c}*({m1}-{m2})+{m2}*aa)) [aw=perwt], ///
-	initial(a 2.096 m1 -0.0062 m2 -0.0284 c 7.457 eth1 0.157 eth2 0.185 eth3 -0.027 eth4 -0.063 eth5 0.004 year1 0.144 year2 0.161 year3 0.199 year4 0.211 year5 0.239 year6 0.243 year7 0.250 year8 0.247 age24 0.086 age25 0.213 age26 0.269 age27 0.314 age28 0.360 age29 0.397 age30 0.433 age31 0.469 age32 0.488 age33 0.512 age34 0.525 age35 0.568 age36 0.580 age37 0.594 age38 0.607 age39 0.611 age40 0.615 age41 0.626 age42 0.625 age43 0.633 age44 0.632 age45 0.642 age46 0.650 age47 0.653 age48 0.658 age49 0.661 age50 0.658 age51 0.671 age52 0.669 age53 0.676 age54 0.681 age55 0.676 age56 0.685 age58 0.690 age59 0.847 age60 0.922 state2 0.249 state4 0.151 state5 -0.063 state6 0.347 state8 0.213 state9 0.401 state10 0.210 state11 0.485 state12 0.093 state13 0.105 state15 0.177 state16 0.007 state17 0.241 state18 0.067 state19 0.038 state20 0.069 state21 -0.003 state22 -0.007 state23 0.019 state24 0.350 state25 0.376 state26 0.141 state27 0.219 state28 -0.089 state29 0.053 state30 -0.057 state31 0.021 state32 0.188 state33 0.214 state34 0.426 state35 0.029 state36 0.324 state37 0.052 state38 0.004 state39 0.090 state40 -0.025 state41 0.127 state42 0.131 state44 0.252 state45 0.006 state46 -0.070 state47 0.010 state48 0.113 state49 0.138 state50 0.067 state51 0.225 state53 0.246 state54 -0.070 state55 0.113 state56 0.035 sex -0.227) robust
 
-*/	
 	* Nonlinear regression to plot.
 	xi i.subgroup1*i.aa, noomit
 	drop _Iaa* _Isubgroup1* _IsubXaa_0*
@@ -2787,8 +2772,6 @@ being employed, institutionalized, college graduate, or divorced.
 	
 	* overview of immigrants
 	tabulate subgroup1 if immigrant == 1
-	
-	
 	
 	
 	* PAPER TABLE 1: POOLED
@@ -2854,13 +2837,7 @@ being employed, institutionalized, college graduate, or divorced.
 	keep if countrygroup == 1 | countrygroup == 7
 	drop if missing(subgroup1)
 
-/*	
-	* Linear spline regression with endogenously chosen break point.
-	xi i.subgroup1
-	nl (yrschl = {eth1}*_Isubgroup1_1 + {eth2}*_Isubgroup1_2 + {eth3}*_Isubgroup1_3 + {eth4}*_Isubgroup1_4 + {eth5}*_Isubgroup1_5 + {year1}*_Jyear_2005 + {year2}*_Jyear_2006 + {year3}*_Jyear_2007 + {year4}*_Jyear_2008 + {year5}*_Jyear_2009 + {year6}*_Jyear_2010 + {year7}*_Jyear_2011 + {year8}*_Jyear_2012 + {age24}*_Jage_24 + {age25}*_Jage_25 + {age26}*_Jage_26 + {age27}*_Jage_27 + {age28}*_Jage_28 + {age29}*_Jage_29 + {age30}*_Jage_30 + {age31}*_Jage_31 + {age32}*_Jage_32 + {age33}*_Jage_33 + {age34}*_Jage_34 + {age35}*_Jage_35 + {age36}*_Jage_36 + {age37}*_Jage_37 + {age38}*_Jage_38 + {age39}*_Jage_39 + {age40}*_Jage_40 + {age41}*_Jage_41 + {age42}*_Jage_42 + {age43}*_Jage_43 + {age44}*_Jage_44 + {age45}*_Jage_45 + {age46}*_Jage_46 + {age47}*_Jage_47 + {age48}*_Jage_48 + {age49}*_Jage_49 + {age50}*_Jage_50 + {age51}*_Jage_51 + {age52}*_Jage_52 + {age53}*_Jage_53 + {age54}*_Jage_54 + {age55}*_Jage_55 + {age56}*_Jage_56 + {age57}*_Jage_57 + {age58}*_Jage_58 + {age59}*_Jage_59 + {age60}*_Jage_60 + {state2}*_Jstatefip_2 + {state4}*_Jstatefip_4 + {state5}*_Jstatefip_5 + {state6}*_Jstatefip_6 + {state8}*_Jstatefip_8 + {state9}*_Jstatefip_9 + {state10}*_Jstatefip_10 + {state11}*_Jstatefip_11 + {state12}*_Jstatefip_12 + {state13}*_Jstatefip_13 + {state15}*_Jstatefip_15 + {state16}*_Jstatefip_16 + {state17}*_Jstatefip_17 + {state18}*_Jstatefip_18 + {state19}*_Jstatefip_19 + {state20}*_Jstatefip_20 + {state21}*_Jstatefip_21 + {state22}*_Jstatefip_22 + {state23}*_Jstatefip_23 + {state24}*_Jstatefip_24 + {state25}*_Jstatefip_25 + {state26}*_Jstatefip_26 + {state27}*_Jstatefip_27 + {state28}*_Jstatefip_28 + {state29}*_Jstatefip_29 + {state30}*_Jstatefip_30 + {state31}*_Jstatefip_31 + {state32}*_Jstatefip_32 + {state33}*_Jstatefip_33 + {state34}*_Jstatefip_34 + {state35}*_Jstatefip_35 + {state36}*_Jstatefip_36 + {state37}*_Jstatefip_37 + {state38}*_Jstatefip_38 + {state39}*_Jstatefip_39 + {state40}*_Jstatefip_40 + {state41}*_Jstatefip_41 + {state42}*_Jstatefip_42 + {state44}*_Jstatefip_44 + {state45}*_Jstatefip_45 + {state46}*_Jstatefip_46 + {state47}*_Jstatefip_47 + {state48}*_Jstatefip_48 + {state49}*_Jstatefip_49 + {state50}*_Jstatefip_50 + {state51}*_Jstatefip_51 + {state53}*_Jstatefip_53 + {state54}*_Jstatefip_54 + {state55}*_Jstatefip_55 + {state56}*_Jstatefip_56 + {sex}*sex +	///
-	cond(aa<{c},{a}+{m1}*aa,{a}+{c}*({m1}-{m2})+{m2}*aa)) [aw=perwt], ///
-	initial(a 12.0 m1 -0.087 m2 -0.362 c 11.872 eth1 1.186 eth2 1.756 eth3 -0.488 eth4 -1.008 eth5 -0.166 year1 0.211 year2 0.172 year3 0.211 year4 0.220 year5 0.240 year6 0.248 year7 0.272 year8 0.280 age24 0.209 age25 0.320 age26 0.431 age27 0.513 age28 0.587 age29 0.660 age30 0.721 age31 0.798 age32 0.802 age33 0.810 age34 0.792 age35 0.805 age36 0.822 age37 0.817 age38 0.799 age39 0.778 age40 0.722 age41 0.729 age42 0.673 age43 0.663 age44 0.636 age45 0.611 age46 0.608 age47 0.607 age48 0.603 age49 0.611 age50 0.613 age51 0.635 age52 0.663 age53 0.677 age54 0.690 age55 0.711 age56 0.724 age58 0.728 age59 0.695 age60 0.651 state2 0.516 state4 0.474 state5 -0.093 state6 0.794 state8 1.041 state9 1.120 state10 0.427 state11 1.676 state12 0.379 state13 0.332 state15 0.822 state16 0.400 state17 0.760 state18 0.169 state19 0.507 state20 0.690 state21 -0.107 state22 -0.178 state23 0.441 state24 0.885 state25 1.278 state26 0.355 state27 0.906 state28 -0.184 state29 0.319 state30 0.547 state31 0.709 state32 0.251 state33 0.782 state34 0.976 state35 0.368 state36 0.957 state37 0.343 state38 0.722 state39 0.278 state40 0.184 state41 0.639 state42 0.466 state44 0.772 state45 0.117 state46 0.453 state47 0.056 state48 0.335 state49 0.695 state50 0.802 state51 0.739 state53 0.759 state54 -0.240 state55 0.525 state56 0.394 sex 0.189) robust
-*/
+
 	* Nonlinear regression to plot.	
 	xi i.subgroup1*i.aa, noomit
 	drop _Iaa* _Isubgroup1* _IsubXaa_0*
@@ -2886,7 +2863,7 @@ being employed, institutionalized, college graduate, or divorced.
 	
 	line estimate min95 max95 aa, by(group,ix note("") legend(at(6) pos(0) textwidth(6))) lpattern(solid dash dash) lwidth(medthick medium medium) xtitle("Age at Arrival") ytitle("Years of Schooling, Relative to Natives") legend(order(1 2) label(1 "Parameter estimate") label(2 "95% Confidence Interval") rows(2) forces size(small)) xlabel(0(5)20)
 	graph export ./results/Figure4b_longschool.pdf, replace
-    * PAPER FIGURE 4B 
+    	* PAPER FIGURE 4B 
 
 ************************************************************************************* 
 
@@ -2905,11 +2882,6 @@ being employed, institutionalized, college graduate, or divorced.
 	keep if aa <= 5 | immigrant == 0
 	keep if countrygroup >= 2 & countrygroup != 6
 	
-	/*
-	* Linear regression to test for trend effects formally.
-	xi i.countrygroup
-	reg logwage aa sex _I* _J* [aw=perwt], robust
-	*/
 	
 	* Nonlinear regression to plot.
 	xi i.countrygroup*i.aa, noomit
@@ -2935,7 +2907,7 @@ being employed, institutionalized, college graduate, or divorced.
 	
 	line estimate min95 max95 aa, by(group,ix note("") legend(textwidth(6))) lpattern(solid dash dash) lwidth(medthick medium medium) xtitle("Age at Arrival") ytitle("Log Wages, Relative to Natives") legend(order(1 2) label(1 "Parameter estimate") label(2 "95% Confidence Interval") forces size(small)) xlabel(0(1)5) ylabel(-1(0.5)0.5)
 	graph export ./results/Figure5_othergroup_wage.pdf, replace
-    * PAPER FIGURE 5
+    	* PAPER FIGURE 5
 
 	
 ************************************************************************************* 
