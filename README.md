@@ -20,7 +20,7 @@ Please download the newest version of [`Schoellman (2016) replication package`](
     │   │   │    ├── census              # Only need this for the main results Table 1 & Figure 2-5
     │   │   │    └── (other census)
     │   │   ├── ec_adult-modified.do     # Download this dofile from my repo above
-    │   │   ├── master.do                # !!!RUN THIS ONE!!!
+    │   │   ├── master-modified.do       # Download this dofile from my repo above & RUN THIS ONE!
     │   │   ├── temp                     # Store the generated sub-datasets
     │   │   └── results                  # Store the generated figures & .tex
     │   └── LISENSE.txt
@@ -31,7 +31,13 @@ Please download the newest version of [`Schoellman (2016) replication package`](
 Following the following steps to replicate Table 1 & Figure 2-5 in Schoellman (2006):
 
 1. In `/raw-data/`, we only need `/census/usa_00131.dat`.
-2. To construct necessary datasets for this exercise, download my modified version of codes above: `ec_adult-modified.do` and make sure you place it at the right path.
+2. See `/data/readme.txt` if you want to do Robustness checks.
+3. To construct necessary datasets, download my modified version of codes above: `ec_adult-modified.do` and make sure you place it at the right path.
+4. Open `/data/master-modified.do` and ensure it carries out the program `ec_adult-modified.do`.
+5. Section 1 is mainly Data importation and cleaning, which takes roughly 3-4 hours.
+6. We will save a subset of samples `/temp/census_sample_tenPercentDummy.dta` at the end of first section. This subset excludes 90% of the natives data, which are relatively irrelavant to the paper focus but significantly saves running time.
+7. Section 2 is the results replications. I modified the fixed effect regressions and calculate estimates of our variables of interest, their standard errors, and confidence intervals separately. It yields the same estimates.
+8. Check the Table 1 and Figure 2-5 in the original paper and see if they are "consistent". 
 
 ## References
 
