@@ -1,5 +1,5 @@
-# REPLICATION: Garthwaite et al. (2014) QJE
-**Last edited:** February 15, 2024
+# REPLICATION: Schoellman (2016) AEJ: Macro
+**Last edited:** February 17, 2024
 
 ## Table of Contents
 
@@ -10,15 +10,16 @@
 
 ## Folder 
 
-Please download the newest version of [`Garthwaite et al. (2014) replication package`](http://www.nber.org/~notom/ggn-replication-kit.zip) and check/rename the package to `ggn-replication-kit`. Here is the main structure that your local directory may look like:
+Please download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view) here and check/rename the package to `Replication package for ECHCD`. The main structure of your local directory may look like:
 
     . 
-    ├── ggn-replication-kit              # Your downloaded replication pkg 
-    │   ├── do
-    │   │   ├── summary.do               # RUN THIS .DO FILE
+    ├── Replication package for ECHCD    # Your downloaded replication pkg 
+    │   ├── data
+    │   │   ├── readme.txt               # READ before executing the master.do!
+    │   │   ├── raw-data               # RUN THIS .DO FILE
     │   │   ├── README.md                # A very "succinct" README file From Authors
     │   │   └── (bunch of do files)
-    │   ├── dta                          # Raw data; consider download new CPS data from [https://cps.ipums.org/cps/](https://cps.ipums.org/cps/)
+    │   ├── dta                          # Raw data
     │   ├── gph                          # Generated figures
     │   ├── log  
     └── └── src  
