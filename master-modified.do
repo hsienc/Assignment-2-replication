@@ -5,6 +5,10 @@
 
 master.do
 
+Original package: https://www.openicpsr.org/openicpsr/project/114117/version/V2/view
+
+Modified by Eric Hsienchen Chu
+
 Calls the other necessary stata files. Cleans up results & temporary folders
 to make sure all results are new and all temporary files are destroyed. 
 
@@ -32,8 +36,9 @@ to make sure all results are new and all temporary files are destroyed.
 	do ec_adult-modified.do   
 *	do ec_sim.do
 
- 	! rm -r ./temp/
- 	! mkdir ./temp/
+* Do NOT comment these out if you need to employ more analysis
+* 	! rm -r ./temp/ 
+* 	! mkdir ./temp/
 
 
 *
