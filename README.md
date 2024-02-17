@@ -4,7 +4,7 @@
 ## Table of Contents
 
 - [Folder Structure](#Folder)
-- [Data Construction](#Data)
+- [Replication Instruction](#Replication)
 - [References](#References)
   
 
@@ -16,23 +16,25 @@ Please download the newest version of [`Schoellman (2016) replication package`](
     ├── Replication package for ECHCD    # Your downloaded replication pkg 
     │   ├── data
     │   │   ├── readme.txt               # READ before executing the master.do!
-    │   │   ├── raw-data               # RUN THIS .DO FILE
-    │   │   ├── README.md                # A very "succinct" README file From Authors
-    │   │   └── (bunch of do files)
-    │   ├── dta                          # Raw data
-    │   ├── gph                          # Generated figures
-    │   ├── log  
-    └── └── src  
+    │   │   ├── raw-data                 
+    │   │   │    ├── census              # Only need this for the main results Table 1 & Figure 2-5
+    │   │   │    └── (other census)
+    │   │   ├── ec_adult-modified.do     # Download this dofile from my repo above
+    │   │   ├── master.do                # !!!RUN THIS ONE!!!
+    │   │   ├── temp                     # Store the generated sub-datasets
+    │   │   └── results                  # Store the generated figures & .tex
+    │   └── LISENSE.txt
+    └── README.md                        # (Optional) Download this instruction
 
-## Data 
+## Instruction 
 
-In `/raw-data/`, we need to manually download `IPUMS` datasets and `IHARP` dataset into `/raw-data/parents-abroad/` and `/raw-data/iharp/`, respectively.
+Following the following steps to replicate Table 1 & Figure 2-5 in Schoellman (2006):
 
-1. `IPUMS`: Register with IPUMS at [https://international.ipums.org/international/](https://international.ipums.org/international/). Your extract needs to contain data on the following variables:
-   > cntry year sample serial pernum wtper nchild age sex chborn yrschl educkh educvn empstat empstatd occ
-   
-   This extract should be placed in `/raw data/parents abroad/`. Note that, “detailed” codes are automatically included in extracts for selected variables in IPUMS USA. So, selecting EMPSTAT simultaneously contain both `EMPSTAT` (general) and `EMPSTATD` (detailed) in our desirable variable list. Also note that, to read in data successfully, one will need to modify `lines 2254-2272` of `/data/ec_family.do` using the .do file provided with the extract.
+1. In `/raw-data/`, we only need `/census/usa_00131.dat`.
+2. To construct necessary datasets for this exercise, download my modified version of codes above: `ec_adult-modified.do` and make sure you place it at the right path.
 
 ## References
 
-Craig Garthwaite, Tal Gross, Matthew J. Notowidigdo, Public Health Insurance, Labor Supply, and Employment Lock , The Quarterly Journal of Economics, Volume 129, Issue 2, May 2014, Pages 653–696, [https://doi.org/10.1093/qje/qju005](https://doi.org/10.1093/qje/qju005)
+Schoellman, Todd. (2016). Early childhood human capital and development. American Economic Jour-
+nal: Macroeconomics, 8(3), 145–74. [https://doi.org/10.1257/mac.20150117](https://doi.org/10.1257/mac.20150117)
+
