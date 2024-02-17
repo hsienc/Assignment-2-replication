@@ -11,13 +11,6 @@ of their age at arrival to the United States.
 Steps:
 1.  Setup and manipulation of external files.
 2.  Main group testing.
-3.  Robustness: Other cuts on the Indochinese immigrants. 
-4.  Robustness: Other groups of immigrants altogether. 
-5.  Robustness: Throw out ethnic enclaves
-6. 	Robustness: Only men, only women.
-7.  Robustness: Include children likely to be born in camps. 
-8.  Robustness: Extra immigration controls
-
 
 *************************************************************************************
 *************************************************************************************
