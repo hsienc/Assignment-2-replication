@@ -30,14 +30,15 @@ Please download the newest version of [`Schoellman (2016) replication package`](
 
 Following the following steps to replicate Table 1 & Figure 2-5 in Schoellman (2006):
 
-1. In `/raw-data/`, we only need `/census/usa_00131.dat`.
-2. See `/data/readme.txt` if you want to do Robustness checks.
+1. Download the newest version of [`Schoellman (2016) replication package`](https://www.openicpsr.org/openicpsr/project/114117/version/V2/view). This instruction is based on v2.
+2. In `/raw-data/`, we check if `/census/usa_00131.dat` is contained.
 3. To construct necessary datasets, download my modified version of codes above: `ec_adult-modified.do` and make sure you place it at the right path.
-4. Open `/data/master-modified.do` and ensure it carries out the program `ec_adult-modified.do`.
-5. Section 1 is mainly Data importation and cleaning, which takes roughly 3-4 hours.
-6. We will save a subset of samples `/temp/census_sample_tenPercentDummy.dta` at the end of Section 1. This subset of data excludes 90% of the natives data, which are relatively irrelavant to the paper focus but significantly saves running time (only takes ~2 minutes to load in).
-7. Section 2 is the results replications. I modified the fixed effect regressions in the original package and calculate estimates of our variables of interest, their standard errors, and confidence intervals separately. It yields the same estimates.
-8. Check the Table 1 and Figure 2-5 in the original paper and see if they are "consistent".
+4. (Optional)  See `/data/readme.txt` if you want to do more Robustness checks. One needs to download two additional datasets & waits for approval.
+5. Open `/data/master-modified.do` and ensure it carries out the program `ec_adult-modified.do`.
+6. Section 1 is mainly Data importation and cleaning, which takes roughly 3-4 hours.
+7. We will save a subset of samples `/temp/census_sample_tenPercentDummy.dta` at the end of Section 1. This subset of data excludes 90% of the natives data, which are relatively irrelavant to the paper focus but significantly saves running time (only takes ~2 minutes to load in).
+8. Section 2 is the results replications. I modified the fixed effect regressions in the original package and calculate estimates of our variables of interest, their standard errors, and confidence intervals separately. It yields the same estimates.
+9. Check the Table 1 and Figure 2-5 in the original paper and see if they are "consistent".
 
 Note. My observations have discrepancies with the original Schoellman (2006) paper. I suspect this was due to some memory error when loading in the raw data `/census/usa_00131.dat`. The total observations loaded in from `usa_00131.dat` are around 29,800,000 during my replication process. The results and graphs are fairly consistent with the original paper.    
 
