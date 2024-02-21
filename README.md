@@ -1,5 +1,7 @@
 # REPLICATION: Schoellman (2016) AEJ: Macro
-**Last edited:** February 17, 2024
+**Last edited:** February 21, 2024
+
+See the latest version of Replication report: [https://github.com/hsienc/econ_580_assignment_2/blob/a1671584a91817c2184b8adb1bc6eaaa75b9bf52/Eric_ECON580_Replication_report_5_page.pdf]
 
 ## Table of Contents
 
